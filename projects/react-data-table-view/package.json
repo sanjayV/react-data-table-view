@@ -1,0 +1,49 @@
+{
+    "name": "react-data-table-view",
+    "version": "1.0.0",
+    "description": "React component for table view structure",
+    "main": "build/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "webpack --watch",
+        "build": "webpack --mode production --config webpack.config.js"
+    },
+    "keywords": [
+        "react",
+        "react",
+        "js",
+        "reactJS",
+        "react",
+        "table",
+        "react",
+        "grid",
+        "react",
+        "table",
+        "view",
+        "react",
+        "data",
+        "table"
+    ],
+    "author": "sanjay verma <skumarverma45@gmail.com>",
+    "license": "MIT",
+    "peerDependencies": {
+        "react": "^16.7.0",
+        "react-dom": "^16.7.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "~7.2.3",
+        "@babel/core": "~7.2.2",
+        "@babel/plugin-proposal-object-rest-spread": "~7.2.0",
+        "@babel/preset-env": "~7.2.3",
+        "@babel/preset-react": "~7.0.0",
+        "@babel/runtime": "~7.2.0",
+        "babel-loader": "~8.0.4",
+        "babel-preset-env": "^1.7.0",
+        "react": "^16.7.0",
+        "react-dom": "^16.7.0",
+        "webpack-cli": "^3.1.2"
+    },
+    "dependencies": {
+        "react-scripts": "^2.1.2"
+    }
+}

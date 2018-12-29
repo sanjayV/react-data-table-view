@@ -1,10 +1,10 @@
 {
-  "name": "my-app",
+  "name": "react-data-table-view",
   "version": "1.0.0",
-  "description": "Describe my-app here",
+  "description": "React component for table view structure",
   "private": true,
   "scripts": {
-    "build": "nwb build-react-app",
+    "build": "nwb --config ./nwb.config.js build-react-app",
     "clean": "nwb clean-app",
     "start": "nwb serve-react-app",
     "test": "nwb test-react",
