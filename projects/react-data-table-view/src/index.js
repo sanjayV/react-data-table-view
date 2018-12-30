@@ -1,26 +1,49 @@
 import prop from 'prop-types';
 import React, { Component } from 'react';
+import './styles/table.css';
 
-class LoadingButton extends Component {
+class TableWrapper extends Component {
     static propTypes = {
-        disabled: prop.bool,
-        loading: prop.bool,
-        type: prop.string,
+        title: prop.string,
     }
     static defaultProps = {
-        disabled: false,
-        loading: false,
-        type: 'button',
+        title: 'Default title',
     }
     render() {
-        let { children, disabled, loading, type, ...props } = this.props
-        if (loading) {
-            disabled = true
-        }
-        return <button disabled={disabled} type={type} {...props}>
-            {children}
-        </button>
+        return <div>
+            {this.props.title}
+            <table className="react-tables">
+                <thead>
+                    <tr>
+                        <td>
+                            Test Header 1
+                        </td>
+                        <td>
+                            Test Header 2
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Test Data Row 1 col 1
+                        </td>
+                        <td>
+                            Test Data Row 1 col 2
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Test Data Row 2 col 1
+                        </td>
+                        <td>
+                            Test Data Row 2 col 2
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>;
     }
 }
 
-export default LoadingButton
+export default TableWrapper;

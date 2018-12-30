@@ -18,7 +18,15 @@ module.exports = {
                         presets: ['@babel/preset-env']
                     }
                 }
-            }
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader'],
+            },
+            {
+				test: /\.(jpe?g|png|gif|svg|ttf|eot|woff2?)$/,
+				use: 'url-loader',
+			},
         ]
     },
     externals: {

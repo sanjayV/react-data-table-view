@@ -1,0 +1,22 @@
+.react-tables {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.react-tables td, .react-tables th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.react-tables tr:nth-child(even){background-color: #f2f2f2;}
+
+.react-tables tr:hover {background-color: rgb(163, 141, 141);}
+
+.react-tables th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
