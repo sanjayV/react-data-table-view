@@ -1,22 +1,71 @@
-.react-tables {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
+.basic {
+    background-color: #fff;
+    border-color: #ddd;
+    border-width: 1px;
+    box-shadow: none;
+    margin: 10px;
+    padding: 45px 15px 15px;
+    position: relative;
+    border-style: solid;
+    height: 100%;
 }
+
+.basic .table-responsive {
+    min-height: .01%;
+    overflow-x: auto;
+}
+
+.basic .table-responsive .table-title {
+    color: #959595;
+    content: "Example";
+    font-size: 12px;
+    font-weight: 700;
+    left: 15px;
+    letter-spacing: 1px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 15px;
+}
+
+.react-tables {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    border-collapse: collapse;
+    background-color: transparent;
+    border-spacing: 0;
+    width: 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+}
+
 
 .react-tables td, .react-tables th {
-    border: 1px solid #ddd;
+    border-top: 1px solid #ddd;
     padding: 8px;
+    text-align: left;
 }
 
-.react-tables tr:nth-child(even){background-color: #f2f2f2;}
+.react-tables>thead:first-child>tr:first-child>th {
+    border-top: 0;
+}
 
-.react-tables tr:hover {background-color: rgb(163, 141, 141);}
+.react-tables tr th {
+    border-bottom: 2px solid #ddd;
+    vertical-align: bottom;
+}
 
-.react-tables th {
+.react-tables tr:nth-child(even){
+    background-color: #f9f9f9;
+}
+
+.react-tables tbody tr:hover {
+    background-color: #f2f2f2;
+}
+
+/* .react-tables th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
     background-color: #4CAF50;
     color: white;
-}
+} */
