@@ -4,13 +4,17 @@ import DataTable from "react-data-table-view";
 import React, { Component } from 'react'
 
 class App extends Component {
-    state = {loading: false}
-    /* <div className="App-heading App-flex">
-        <h2>Welcome to <span className="App-react">React</span></h2>
-    </div> */
+    state = { loading: false }
     render() {
+        const data = [],
+            options = {
+                'title': 'My First Table',
+                'theme': 'dark', //basic
+                'strip': false,
+                'hover': true
+            };
         return <div className="App">
-            <DataTable title="Test Data"></DataTable>
+            <DataTable data={data} options={options}></DataTable>
         </div>
     }
 }

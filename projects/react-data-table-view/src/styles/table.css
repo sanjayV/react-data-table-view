@@ -1,6 +1,4 @@
-.basic {
-    background-color: #fff;
-    border-color: #ddd;
+.table {
     border-width: 1px;
     box-shadow: none;
     margin: 10px;
@@ -10,12 +8,12 @@
     height: 100%;
 }
 
-.basic .table-responsive {
+.table .table-responsive {
     min-height: .01%;
     overflow-x: auto;
 }
 
-.basic .table-responsive .table-title {
+.table .table-responsive .table-title {
     color: #959595;
     content: "Example";
     font-size: 12px;
@@ -27,7 +25,7 @@
     top: 15px;
 }
 
-.react-tables {
+.table .react-tables {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 14px;
     border-collapse: collapse;
@@ -38,34 +36,66 @@
     max-width: 100%;
 }
 
+.table .react-tables tr th {
+    border-bottom: 2px solid #dee2e6;
+    vertical-align: bottom;
+}
 
-.react-tables td, .react-tables th {
-    border-top: 1px solid #ddd;
+.table .react-tables td, .react-tables th {
+    border-top: 1px solid #dee2e6;
     padding: 8px;
     text-align: left;
 }
 
-.react-tables>thead:first-child>tr:first-child>th {
+.table .react-tables>thead:first-child>tr:first-child>th {
     border-top: 0;
 }
 
-.react-tables tr th {
+/**
+ * basic theme
+ */
+ .table-basic {
+    background-color: #fff;
+    border-color: #ddd;
+}
+
+.table-basic.table-striped tbody tr:nth-of-type(odd){
+    background-color: #f9f9f9;
+}
+
+.table-basic.table-hover tbody tr:hover {
+    background-color: #f2f2f2;
+}
+
+.table-basic .react-tables tr th {
     border-bottom: 2px solid #ddd;
     vertical-align: bottom;
 }
 
-.react-tables tr:nth-child(even){
-    background-color: #f9f9f9;
+.table-basic th,
+.table-basic td,
+.table-basic thead th {
+    border-color: #ddd;
 }
 
-.react-tables tbody tr:hover {
-    background-color: #f2f2f2;
+/**
+ * dark theme
+ */
+.table-dark {
+    color: #fff;
+    background-color: #212529;
 }
 
-/* .react-tables th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #4CAF50;
-    color: white;
-} */
+.table-dark .react-tables th,
+.table-dark .react-tables td,
+.table-dark .react-tables thead th {
+    border-color: #32383e;
+}
+
+.table-dark.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.table-dark.table-hover tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.075);
+}

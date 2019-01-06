@@ -1,13 +1,35 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import { CONSTANTS } from './constant/index';
 import './styles/table.css';
 
 class TableWrapper extends Component {
+    constructor(...props) {
+        super(...props);
+    }
+
     render() {
+        let theme = 'table';
+        const userOptions = this.props.options || {};
+        const options = { ...CONSTANTS.DEFAULT_OPTIONS, ...userOptions };
+        if (options.theme
+            && typeof (options.theme) === 'string'
+            && CONSTANTS.SUPPORTED_THEME[options.theme.toLowerCase()]) {
+            theme += `${' '}${CONSTANTS.SUPPORTED_THEME[options.theme.toLowerCase()]}`;
+        }
+
+        if (options.strip) {
+            theme += `${' '}${'table-striped'}`
+        }
+
+        if (options.hover) {
+            theme += `${' '}${'table-hover'}`
+        }
+
         return (
-            <div className="basic">
+            <div className={theme}>
                 <div className="table-responsive">
-                    <div className="table-title">{this.props.title}</div>
+                    <div className="table-title">{this.props.options.title}</div>
                     <table className="react-tables">
                         <thead>
                             <tr>
@@ -99,31 +121,28 @@ class TableWrapper extends Component {
 
 TableWrapper.propTypes = {
     /**
-     * Table heading
+     * Table data
      */
-    title: PropTypes.string,
-
+    data: PropTypes.array.isRequired,
     /**
-     * Table theme
+     * Table options
      */
-    theme: PropTypes.string,
-
-    /**
-     * Adds borders on all sides of the table and cells.
-     */
-    bordered: PropTypes.bool,
-
-    /**
-     * Enable a hover state on table rows within a `<tbody>`.
-     */
-    hover: PropTypes.bool
+    options: PropTypes.shape({
+        title: PropTypes.string,
+        theme: PropTypes.string, //basic
+        strip: PropTypes.bool,
+        hover: PropTypes.bool
+    })
 };
 
 TableWrapper.defaultProps = {
-    title: 'Default title',
-    theme: 'basic',
-    bordered: false,
-    hover: true
+    data: [],
+    options: {
+        title: '',
+        theme: 'basic',
+        strip: false,
+        hover: false
+    }
 };
 
 export default TableWrapper;
