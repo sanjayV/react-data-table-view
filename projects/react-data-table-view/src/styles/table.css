@@ -1,0 +1,101 @@
+.table {
+    border-width: 1px;
+    box-shadow: none;
+    margin: 10px;
+    padding: 45px 15px 15px;
+    position: relative;
+    border-style: solid;
+    height: 100%;
+}
+
+.table .table-responsive {
+    min-height: .01%;
+    overflow-x: auto;
+}
+
+.table .table-responsive .table-title {
+    color: #959595;
+    content: "Example";
+    font-size: 12px;
+    font-weight: 700;
+    left: 15px;
+    letter-spacing: 1px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 15px;
+}
+
+.table .react-tables {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    border-collapse: collapse;
+    background-color: transparent;
+    border-spacing: 0;
+    width: 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+}
+
+.table .react-tables tr th {
+    border-bottom: 2px solid #dee2e6;
+    vertical-align: bottom;
+}
+
+.table .react-tables td, .react-tables th {
+    border-top: 1px solid #dee2e6;
+    padding: 8px;
+    text-align: left;
+}
+
+.table .react-tables>thead:first-child>tr:first-child>th {
+    border-top: 0;
+}
+
+/**
+ * basic theme
+ */
+ .table-basic {
+    background-color: #fff;
+    border-color: #ddd;
+}
+
+.table-basic.table-striped tbody tr:nth-of-type(odd){
+    background-color: #f9f9f9;
+}
+
+.table-basic.table-hover tbody tr:hover {
+    background-color: #f2f2f2;
+}
+
+.table-basic .react-tables tr th {
+    border-bottom: 2px solid #ddd;
+    vertical-align: bottom;
+}
+
+.table-basic th,
+.table-basic td,
+.table-basic thead th {
+    border-color: #ddd;
+}
+
+/**
+ * dark theme
+ */
+.table-dark {
+    color: #fff;
+    background-color: #212529;
+}
+
+.table-dark .react-tables th,
+.table-dark .react-tables td,
+.table-dark .react-tables thead th {
+    border-color: #32383e;
+}
+
+.table-dark.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.table-dark.table-hover tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.075);
+}
