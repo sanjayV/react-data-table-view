@@ -7,6 +7,7 @@ export const CONSTANTS = {
         'title': '',
         'theme': 'basic',
         'strip': false,
-        'hover': false
+        'hover': false,
+        'noDataText': 'No data'
     }
 };
